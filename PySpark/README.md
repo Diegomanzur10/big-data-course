@@ -71,16 +71,3 @@ Una vez el estado sea RUNNING:
 2. Abrir la pestaña Web Interfaces (Component Gateway).
 3. Entrar a Jupyter y crear notebook PySpark (kernel Spark preconfigurado).
 
-## 5. Limpieza (para evitar costos)
-
-```bash
-gcloud dataproc clusters delete spark-single-node --region=us-central1
-```
-
-## 6. Notas
-
-- Ajusta `spark.sql.shuffle.partitions` según tamaño de datos (valor por defecto suele ser 200).
-- Para más memoria: usar `e2-standard-8` o familias N2 si necesitas más rendimiento.
-- Para multi-nodo: reemplaza `--single-node` por `--num-workers=<N>` y añade parámetros de tipo de workers.
-
-Fin.
